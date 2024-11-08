@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import transactionsReducer from '../features/transactions/transactionsSlice';
-import budgetsReducer from '../features/budgets/budgetsSlice';
+import { budgetsSlice } from '../features/budgets/budgetsSlice';
+import { transactionsSlice } from '../features/transactions/transactionsSlice'
 
 export default configureStore({
   reducer: {
-    transactions: transactionsReducer,
-    budgets: budgetsReducer,
+    transactions: transactionsSlice.reducer,
+    budgets: budgetsSlice.reducer,
   },
 });
